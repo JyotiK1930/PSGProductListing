@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductListScreen from './screens/ProductListScreen';
+import ProductListScreen from './src/screens/ProductListScreen';
 
 export default function App() {
 return <ProductListScreen />;

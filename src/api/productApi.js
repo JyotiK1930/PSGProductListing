@@ -19,7 +19,7 @@ export async function getProducts({limit = 20, skip=0}={}) {
 export async function searchProducts({query, limit = 20, skip=0}={}) {
   const q = encodeURIComponent(query?? "");
 
-  const res = await fetch(`${BASE_URL}?search=q&limit=${limit}&skip=${skip}`)
+  const res = await fetch(`${BASE_URL}/search?q=${query}&limit=${limit}&skip=${skip}`)
   if(!res.ok){
     throw new Error(`search products failed`)
   }

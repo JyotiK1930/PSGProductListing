@@ -1,5 +1,31 @@
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
-import { getProducts, searchProducts } from '../api/productApi';
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useRef,
+} from "react";
+
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  Image,
+  TextInput,
+  ActivityIndicator,
+  RefreshControl,
+  StatusBar,
+} from "react-native";
+
+import {
+  SafeAreaView,
+  SafeAreaProvider,
+} from "react-native-safe-area-context";
+
+import {
+  getProducts,
+  searchProducts,
+} from "../api/productApi";
 
 const PAGE_LIMIT = 20;
 const SEARCH_DEBOUNCE_MS = 400;
